@@ -6,7 +6,9 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <ItemListContainer />
+      <ItemListContainer 
+      greeting1="Te damos la bienvenida a The Book Corner!" 
+      greeting2="Variedad de libros al alcance de un click" />
     </div>
   );
 }
