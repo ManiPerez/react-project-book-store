@@ -1,20 +1,45 @@
 import React from 'react';
 import './styles.css';
-import bookIcon from './bookIcon.png';
+import { GiBookshelf } from 'react-icons/gi';
+import CartWidget from './CartWidget';
+
+const labels = [{text: 'Home'}, {text: 'books'}, {text: 'About'}, {text: 'Contact'}]
+
+const NavLinks = (props) => {
+
+  const {label} = props
+
+  return (
+    <a href="/#">{label}</a>
+  )
+}
+
+const buttons = [{text: 'Log In'}, {text: 'Sign In'}]
+
+const Button = (props) => {
+
+  const {label} = props
+
+  return (
+    <button className="log-in">{label}</button>
+  )
+}
 
 const Navbar = () => {
     return (
       <nav className="Navbar"> 
-        <div className="icon-box">
-          <img src={bookIcon} alt="book-icon"/>
-          <p>The Book Corner</p>
+        <div className="logo">
+            <GiBookshelf className="logo-icon"/>
+            <h2 className="logo-label">The Book Corner</h2>
         </div>
         <div className="nav-links">
-          <a href="/#">Home</a>
-          <a href="/#">Books</a>
-          <a href="/#">About</a>
-          <a href="/#">Contact</a>
-          <a className="log-in" href="/#">Log In</a>
+          {labels.map(label => 
+            <NavLinks label={label.text} />
+            )}         
+          {buttons.map(label => 
+            <Button label={label.text} />
+            )}
+          <CartWidget />  
         </div>
       </nav>
     )
