@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
-    border-bottom: 1px solid #074749;
+    border-bottom: 1px solid #24A69A;
     display: flex;
     height: 70px;
     padding: 0 5rem;
@@ -25,7 +25,7 @@
   }
   
   .logo h2 {
-    font-size: calc(7px + 2vmin);
+    font-size: calc(5px + 2vmin);
     font-weight: 400;
     color: #24A69A;
     text-align: center;
@@ -40,15 +40,15 @@
   .Navbar .nav-links a {
     align-self: center;
     text-decoration: none;
-    font-size: calc(7px + 2vmin);
+    font-size: calc(5px + 2vmin);
     color: #24A69A;
+    font-weight: 400;
     padding: .5rem 1rem;
     margin-right: .5rem;
   }
 
   .Navbar .nav-links a:hover {
-    color: #074749;
-    font-weight: 400;
+    color: #F2EDE5;
     background: #24A69A;
     border-radius: 1.5rem;
   }
@@ -56,9 +56,10 @@
   .Navbar .nav-links .log-in {
     align-self: center;
     text-decoration: none;
-    font-size: calc(7px + 2vmin);
+    font-size: calc(5px + 2vmin);
+    font-weight: 400;
     color: #24A69A;
-    background: #021718;
+    background: #F2EDE5;
     border: 1.5px solid #24A69A;
     border-radius: 1.5rem;
     padding: .5rem 1rem;
@@ -66,10 +67,8 @@
   }
 
   .Navbar .nav-links .log-in:hover {
-    color: #074749;
-    font-weight: 400;
+    color: #F2EDE5;
     background: #24A69A;
-    border-radius: 1.5rem;
   }
 
   .cart {
@@ -82,13 +81,13 @@
 
   .cart-icon {
     color: #24A69A;
-    font-size: calc(10px + 2vmin);
+    font-size: calc(7px + 2vmin);
     align-self: center;
     padding-right: .5rem;
   }
 
   .cart-counter {
-    font-size: calc(7px + 2vmin);
+    font-size: calc(5px + 2vmin);
     font-weight: 400;
     color: #24A69A;
   }

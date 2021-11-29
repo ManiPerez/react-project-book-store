@@ -3,7 +3,7 @@ import './styles.css';
 import { GiBookshelf } from 'react-icons/gi';
 import CartWidget from './CartWidget';
 
-const labels = [{text: 'Home'}, {text: 'books'}, {text: 'About'}, {text: 'Contact'}]
+const labels = [{text: 'Inicio'}, {text: 'Libros'}, {text: 'Nosotros'}, {text: 'Contacto'}]
 
 const NavLinks = (props) => {
 
@@ -14,7 +14,7 @@ const NavLinks = (props) => {
   )
 }
 
-const buttons = [{text: 'Log In'}, {text: 'Sign In'}]
+const buttons = [{text: 'Iniciar sesión'}, {text: 'Registrarse'}]
 
 const Button = (props) => {
 
