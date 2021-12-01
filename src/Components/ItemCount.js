@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './styles.css';
 import { FiPlusCircle, FiMinusCircle } from 'react-icons/fi';
+import Buttom from 'react-bootstrap/Button'
 
 
 const ItemCount = ({getInitial, getStock, onAdd}) => {
@@ -36,6 +37,7 @@ const ItemCount = ({getInitial, getStock, onAdd}) => {
                     <div onClick={decrement}><FiMinusCircle className="cart-icon" /></div>
                 </div>
                 <a className="add-cart" onClick={msg}>Agregar al carrito</a>
+                <Buttom>Test Button</Buttom>
             </div>
         </div>
     )
