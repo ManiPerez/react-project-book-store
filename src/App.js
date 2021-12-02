@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ItemListContainer from './Containers/ItemListContainer.js';
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer.js';
 import Navbar from './Components/Navbar/Navbar.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

@@ -5,7 +5,7 @@ const products = [
         author: "Antoine de Saint-Exupéry", 
         category: "novel",
         price: 500, 
-        img: "./images/el-principito.jpg",
+        img: "./public/images/el-principito.jpg",
         stock: 43
     },
     {
@@ -14,7 +14,7 @@ const products = [
         author: "Arthur Conan Doyle", 
         category: "novel",
         price: 650, 
-        img: "./images/sherlock-holmes.jpg",
+        img: "./public/images/sherlock-holmes.jpg",
         stock: 34
     }
 ] 

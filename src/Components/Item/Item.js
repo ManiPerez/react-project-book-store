@@ -15,7 +15,7 @@ const Item = ({ product }) => {
             <p class="card-text">{product.author}</p>
             <p class="card-text">{product.category}</p>
             <p class="card-text">{product.price}</p>
-            <a href="/#" class="btn btn-primary">Ver detalle</a>
+            <a href="/#" class="btn btn-primary">Ver detalles</a>
         </div>
     </div>
   )

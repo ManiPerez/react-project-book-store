@@ -2,20 +2,20 @@ import React from 'react';
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { getProducts } from '../../products';
-import ItemCount from '../Components/ItemCount/ItemCount.js';
-import ItemList from '../Components/ItemList/ItemList.js';
+import ItemCount from './ItemCount/ItemCount.js';
+import ItemList from './ItemList/ItemList.js';
 
 const ItemListContainer = () => {
-    const [products, getProducts] = useState([])
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
         const list = getProducts()
         list.then(list => {
-            getProducts(list)
+            setProducts(list)
         })
 
         return (() => {
-            getProducts([])
+            setProducts([])
         })
     }, [])
 
