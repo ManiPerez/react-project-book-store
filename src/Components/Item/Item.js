@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // const items = [{title: 'El Principito', author: 'Antoine de Saint-Exupéry', price: '500', img: './images/el-principito.jpg'},
 //                {title: 'Las Aventuras de Sherlock Holmes', author: 'Arthur Conan Doyle', price: '650', img: './images/sherlock-holmes.jpg'}]

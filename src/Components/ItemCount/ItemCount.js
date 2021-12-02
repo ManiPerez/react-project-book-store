@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './styles.css';
 import { FiPlusCircle, FiMinusCircle } from 'react-icons/fi';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const ItemCount = ({getInitial, getStock, onAdd}) => {
@@ -27,15 +28,16 @@ const ItemCount = ({getInitial, getStock, onAdd}) => {
         console.log(`${message} ${count}`)
     }
     return (
-        <div className="container">
-            <h3>Carrito</h3>
-            <div className="container">
-                <div className="container-counter">
-                    <div onClick={increment}><FiPlusCircle className="cart-icon" /></div>
-                    <div><p>{count}</p></div>
-                    <div onClick={decrement}><FiMinusCircle className="cart-icon" /></div>
+        <div class="card text-center" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Carrito</h5>
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <button type="button" class="btn btn-outline-primary" onClick={increment}><FiPlusCircle /></button>
+                    <p class="btn btn-outline-primary">{count}</p>
+                    <button type="button" class="btn btn-outline-primary" onClick={decrement}><FiMinusCircle /></button>
                 </div>
-                <a className="add-cart" onClick={msg}>Agregar al carrito</a>
+                <p class="card-text">Productos: <ItemCount getInitial={1} getStock={15} onAdd={'Cantidad total:'} /></p>                  
+                <a href="/#" class="btn btn-primary" onClick={msg}>Sumar al carrito</a>
             </div>
         </div>
     )

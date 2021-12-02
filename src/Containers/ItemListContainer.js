@@ -1,27 +1,31 @@
 import React from 'react';
-import './styles.css'
+import './styles.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { getProducts } from '../../products';
 import ItemCount from '../Components/ItemCount/ItemCount.js';
-import Item from '../Components/Item/Item.js'
+import ItemList from '../Components/ItemList/ItemList.js';
 
 const ItemListContainer = () => {
+    const [products, getProducts] = useState([])
+
+    useEffect(() => {
+        const list = getProducts()
+        list.then(list => {
+            getProducts(list)
+        })
+
+        return (() => {
+            getProducts([])
+        })
+    }, [])
+
     return (
-        <header className="App-header">
+        <div className="container">
 
-            <div className="box-container">
+            <ItemList products={products} />
+            <ItemCount />
 
-                <Item />
-
-                <div class="card text-center" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Carrito</h5>
-                        <p class="card-text">Productos: <ItemCount getInitial={1} getStock={15} onAdd={'Cantidad total:'} /></p>                  
-                        <a href="/#" class="btn btn-primary">Sumar al carrito</a>
-                    </div>
-                </div>
-                    
-            </div>
-        </header>
-
+        </div>
     )
 }
 
