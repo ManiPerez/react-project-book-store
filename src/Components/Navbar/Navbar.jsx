@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 import { GiBookshelf } from 'react-icons/gi';
-import CartWidget from './CartWidget';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const labels = [{text: 'Inicio'}, {text: 'Libros'}, {text: 'Nosotros'}, {text: 'Contacto'}]
 
@@ -14,32 +14,23 @@ const NavLinks = (props) => {
   )
 }
 
-const buttons = [{text: 'Iniciar sesión'}, {text: 'Registrarse'}]
-
-const Button = (props) => {
-
-  const {label} = props
-
-  return (
-    <button className="log-in">{label}</button>
-  )
-}
-
 const Navbar = () => {
     return (
-      <nav className="Navbar"> 
-        <div className="logo">
-            <GiBookshelf className="logo-icon"/>
-            <h2 className="logo-label">The Book Corner</h2>
+      <nav className="navbar">
+        <div className="navbar__brand">
+          <GiBookshelf className="navbar__logo"/>
+          <h2 className="navbar__title">The Book Corner</h2>
         </div>
-        <div className="nav-links">
+
+        <div className="navbar__links">
           {labels.map(label => 
-            <NavLinks label={label.text} />
-            )}         
-          {buttons.map(label => 
-            <Button label={label.text} />
-            )}
-          <CartWidget />  
+              <NavLinks label={label.text} />
+              )}  
+        </div>
+
+        <div className="navbar__cart">
+            <FaShoppingCart className="navbar__icon" />
+            <span className="navbar__counter">0</span>
         </div>
       </nav>
     )
