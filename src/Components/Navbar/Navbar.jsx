@@ -16,44 +16,22 @@ const NavLinks = (props) => {
 
 const Navbar = () => {
     return (
-      <div>
-        {/* <nav className="navbar">
-          <div className="navbar__brand">
-            <GiBookshelf className="navbar__logo"/>
-            <h2 className="navbar__title">The Book Corner</h2>
-          </div>
 
-          <div className="navbar__links">
-            {labels.map(label => 
-                <NavLinks label={label.category} />
-                )}  
-          </div>
+      <nav className="navbar">
+          <a href="/#" className="navbar__brand"><GiBookshelf className="navbar__logo"/> The Book Corner</a>   
+          <div className="navbar__menu">
+              <ul>
+              {labels.map(label => 
+                  <NavLinks label={label.category} />
+                  )} 
+              </ul>
 
-          <div className="navbar__cart">
-              <FaShoppingCart className="navbar__icon" />
-              <span className="navbar__counter">0</span>
-          </div>
-        </nav> */}
-
-
-        <header>
-          <nav className="navbar">
-              <a href="/#" className="navbar__brand"><GiBookshelf className="navbar__logo"/> The Book Corner</a>   
-              <div className="navbar__menu">
-                  <ul>
-                  {labels.map(label => 
-                      <NavLinks label={label.category} />
-                      )} 
-                  </ul>
-
-                  <div className="navbar__cart">
-                    <FaShoppingCart className="navbar__icon" />
-                    <span className="navbar__counter">0</span>
-                  </div>
-              </div>                   
-          </nav>
-        </header>
-      </div>
+              <div className="navbar__cart">
+                <FaShoppingCart className="navbar__icon" />
+                <span className="navbar__counter">0</span>
+              </div>
+          </div>                   
+      </nav>
     )
 }
 

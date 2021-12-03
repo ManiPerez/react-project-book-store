@@ -27,17 +27,16 @@ const ItemCount = ({getInitial, getStock, onAdd}) => {
         console.log(`${message} ${count}`)
     }
     return (
-        <div className="card text-center product__card">
-            <div className="card-body">
-                <h5 className="card-title">Carrito</h5>
-                <div className="btn-group" role="group" aria-label="Basic outlined example">
-                    <button type="button" className="btn btn-outline-primary" onClick={increment}><FiPlusCircle /></button>
-                    <p className="btn btn-outline-primary">{count}</p>
-                    <button type="button" className="btn btn-outline-primary" onClick={decrement}><FiMinusCircle /></button>
-                </div>
-                <p className="card-text">Productos: <ItemCount getInitial={1} getStock={15} onAdd={'Cantidad total:'} /></p>                  
-                <a href="/#" className="btn btn-primary" onClick={msg}>Sumar al carrito</a>
+
+        <div className="producto-box">
+            <h3>Carrito</h3>
+            <div className="container-counter">
+                <span className="icon" onClick={increment}><FiPlusCircle /></span>
+                <span className="counter">{count}</span>
+                <span className="icon" onClick={decrement}><FiMinusCircle /></span>
             </div>
+            <p className="product-count">Productos: <ItemCount getInitial={1} getStock={15} onAdd={'Cantidad total:'} /></p>
+            <a href="/#" className="btn" onClick={msg}>Sumar al carrito</a>
         </div>
     )
 }

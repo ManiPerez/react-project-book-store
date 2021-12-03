@@ -21,10 +21,6 @@
     --outline-hover: .2rem solid --first-color-alt;
 }
 
-.product__card {
-    width: 18rem;
-}
-
 .producto-box {
     width: 250px;
     background: var(--container-color);
@@ -64,13 +60,6 @@
 .producto-box .price {
     font-size: 18px;
     color: var(--text-color);
-}
-
-.producto-box .added-to-cart {
-    font-size: 15px;
-    color: var(--first-color);
-    font-weight: 400;
-    margin-top: 1rem;
 }
 
 .btn {
