@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import Navbar from './Components/Navbar/Navbar';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

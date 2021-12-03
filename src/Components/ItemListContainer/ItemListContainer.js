@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { getProducts } from '../../products';
 import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
+import { useEffect, useState } from 'react';
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])

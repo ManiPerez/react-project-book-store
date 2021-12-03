@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './styles.css';
 import { FiPlusCircle, FiMinusCircle } from 'react-icons/fi';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const ItemCount = ({getInitial, getStock, onAdd}) => {
@@ -28,16 +27,16 @@ const ItemCount = ({getInitial, getStock, onAdd}) => {
         console.log(`${message} ${count}`)
     }
     return (
-        <div class="card text-center" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Carrito</h5>
-                <div class="btn-group" role="group" aria-label="Basic outlined example">
-                    <button type="button" class="btn btn-outline-primary" onClick={increment}><FiPlusCircle /></button>
-                    <p class="btn btn-outline-primary">{count}</p>
-                    <button type="button" class="btn btn-outline-primary" onClick={decrement}><FiMinusCircle /></button>
+        <div className="card text-center product__card">
+            <div className="card-body">
+                <h5 className="card-title">Carrito</h5>
+                <div className="btn-group" role="group" aria-label="Basic outlined example">
+                    <button type="button" className="btn btn-outline-primary" onClick={increment}><FiPlusCircle /></button>
+                    <p className="btn btn-outline-primary">{count}</p>
+                    <button type="button" className="btn btn-outline-primary" onClick={decrement}><FiMinusCircle /></button>
                 </div>
-                <p class="card-text">Productos: <ItemCount getInitial={1} getStock={15} onAdd={'Cantidad total:'} /></p>                  
-                <a href="/#" class="btn btn-primary" onClick={msg}>Sumar al carrito</a>
+                <p className="card-text">Productos: <ItemCount getInitial={1} getStock={15} onAdd={'Cantidad total:'} /></p>                  
+                <a href="/#" className="btn btn-primary" onClick={msg}>Sumar al carrito</a>
             </div>
         </div>
     )
