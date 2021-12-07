@@ -25,6 +25,7 @@ const ItemListContainer = () => {
 
                 <ItemList products={products} />
                 <ItemCount />
+                
 
             </div>
         </section>   

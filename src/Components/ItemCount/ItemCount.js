@@ -31,9 +31,9 @@ const ItemCount = ({getInitial, getStock, onAdd}) => {
         <div className="item-count-box">
             <h3>Carrito</h3>
             <div className="container-counter">
-                <span className="icon" onClick={increment}><FiPlusCircle /></span>
-                <span className="counter">{count}</span>
-                <span className="icon" onClick={decrement}><FiMinusCircle /></span>
+                <div onClick={increment}><FiPlusCircle className="cart-icon" /></div>
+                <div><p className="cart-counter">{count}</p></div>
+                <div onClick={decrement}><FiMinusCircle className="cart-icon" /></div>
             </div>
             <a href="/#" className="btn" onClick={msg}>Sumar al carrito</a>
         </div>

@@ -81,18 +81,19 @@
     justify-content: center;
 }
 
-.container-counter .icon {
+.cart-icon {
     align-content: center;
     color: var(--title-color);
     font-size: 16px;
+    cursor: pointer;
 }
 
-.container-counter .icon:hover {
+.cart-icon:hover {
     color: var(--first-color);
 }
 
-.container-counter .counter {
-    color: var(--text-color);
+.cart-counter p {
+    color: var(--title-color);
     align-self: center;
     font-size: 14px;
 }
