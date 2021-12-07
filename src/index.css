@@ -7,7 +7,7 @@
   
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 100%, 50%);
-    --first-color-second: hsl(var(--hue-color), 0%, 7%);
+    --first-color-second: #161d34;
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
     --title-color: hsl(var(--hue-color), 8%, 15%);

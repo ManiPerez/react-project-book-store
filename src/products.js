@@ -6,7 +6,8 @@ const products = [
         category: "Fantasía",
         price: 500, 
         img: "images/el-principito.jpg",
-        stock: 43
+        stock: 43,
+        details: "El principito es una novela corta y la obra más famosa del escritor y aviador francés Antoine de Saint-Exupéry."
     },
     {
         id: 2,

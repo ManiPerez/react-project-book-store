@@ -1,5 +1,4 @@
 import React from 'react';
-import './styles.css';
 import { getProducts } from '../../products';
 import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';

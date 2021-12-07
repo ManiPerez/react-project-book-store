@@ -23,61 +23,51 @@
     --radius: 0.2rem;
 }
 
-
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  height: 100vh;
+.item-detail {
   display: grid;
-  justify-content: center;
-  align-items: center;
-  color: --clr-gray500;
+  color: var(--clr-gray300);
   font-size: 0.9rem;
-  background-color: --clr-gray100;
+  background-color: var(--clr-gray100);
+  padding: 0 2rem;
 }
 
 table {
   border-collapse: collapse;
-  box-shadow: 0 5px 10px --clr-gray300;
+  box-shadow: 0 5px 10px var(--clr-gray300);
   background-color: white;
   text-align: left;
   overflow: hidden;
 }
 
 table thead {
-    box-shadow: 0 5px 10px --clr-gray300;
+  background-color: var(--clr-gray700);
+  box-shadow: 0 5px 10px var(--clr-gray300);
 }
 
 table th {
-    padding: 1rem 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-size: 0.7rem;
-    font-weight: 900;
+  color: var(--clr-gray100);
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-  table td {
-    padding: 1rem 2rem;
-  }
+table td {
+  color: var(--clr-gray600);
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
 
-  table a {
-    text-decoration: none;
-    color: --clr-link;
-  }
+table td img {
+  width: 40px;
+  height: 70px;
+  padding-top: 1rem;
+}
 
-
-
-  .amount {
-    text-align: right;
-  }
-
-  /*Color alternating rows*/
-  table tr:nth-child(even) {
-    background-color: --clr-gray150;
-  }

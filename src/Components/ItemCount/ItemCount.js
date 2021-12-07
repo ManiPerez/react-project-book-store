@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './styles.css';
+import { FaShoppingCart } from 'react-icons/fa';
 import { FiPlusCircle, FiMinusCircle } from 'react-icons/fi';
 
 
@@ -29,13 +30,14 @@ const ItemCount = ({getInitial, getStock, onAdd}) => {
     return (
 
         <div className="item-count-box">
+            <FaShoppingCart className="item-count-icon"/>
             <h3>Carrito</h3>
             <div className="container-counter">
                 <div onClick={increment}><FiPlusCircle className="cart-icon" /></div>
-                <div><p className="cart-counter">{count}</p></div>
+                <div className="cart-counter"><p>{count}</p></div>
                 <div onClick={decrement}><FiMinusCircle className="cart-icon" /></div>
             </div>
-            <a href="/#" className="btn" onClick={msg}>Sumar al carrito</a>
+            <a href="/#" className="btn" onClick={msg}>Ver detalle</a>
         </div>
     )
 }
