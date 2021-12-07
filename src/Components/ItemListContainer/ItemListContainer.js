@@ -20,12 +20,14 @@ const ItemListContainer = () => {
     }, [])
 
     return (
-        <div className="container">
+        <section>
+            <div className="container">
 
-            <ItemList products={products} />
-            <ItemCount />
+                <ItemList products={products} />
+                <ItemCount />
 
-        </div>
+            </div>
+        </section>   
     )
 }
 

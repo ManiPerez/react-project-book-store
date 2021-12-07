@@ -4,10 +4,10 @@ import './styles.css';
 
 const CartWidget = () => {
     return (
-        <div className="cart">
-            <FaShoppingCart className="cart-icon"/>
-            <div className="cart-counter">0</div>
-        </div>
+        <button className="navbar__cart">
+            <FaShoppingCart className="navbar__cart-icon"/>
+            <div className="navbar__cart-counter">0</div>
+        </button>
     )
 }
 
