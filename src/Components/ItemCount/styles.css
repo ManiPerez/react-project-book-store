@@ -65,14 +65,16 @@
     text-align: center;
     padding: .8rem 3rem;
     font-size: 1.5rem;
-    border-radius: .5rem;
     color: var(--first-color-second);
-    background-color: var(--first-color);
+    border: 1.5px solid var(--first-color-second);
+    border-radius: .5rem;
     cursor: pointer;
 }
 
 .btn:hover {
-    background: var(--first-color-alt);
+    background-color: var(--first-color);
+    color: var(--container-color);
+    font-weight: 500;
 }
 
 .container-counter {
@@ -91,7 +93,7 @@
 }
 
 .cart-icon:hover {
-    color: var(--first-color-alt);
+    color: var(--first-color);
 }
 
 .cart-counter p {
