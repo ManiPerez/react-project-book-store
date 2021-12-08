@@ -19,7 +19,7 @@
 
 
 .navbar {
-  background-color: var(--clr-gray700);
+  background-color: var(--first-color-second);
   top: 0;
   left: 0;
   width: 100%;
@@ -34,7 +34,7 @@
 
 .navbar__brand {
     color: var(--first-color);
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     text-decoration: none;
 }
@@ -72,6 +72,7 @@
 
 .navbar__menu ul li a:hover {
   color: var(--first-color-alt);
+  transition: .3s;
 }
 
 .navbar__menu .check-btn {
@@ -87,8 +88,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--first-color);
-  color: var(--first-color-second);
+  background: transparent;
+  color: var(--first-color);
+  border: 1px solid var(--first-color);
   border-radius: .5rem;
   padding: .5rem 1rem;
   cursor: pointer;
@@ -105,7 +107,9 @@
 }
 
 .navbar__cart:hover {
-  background: var(--first-color-alt);
+  background: var(--first-color);
+  color: var(--first-color-second);
+  transition: .3s;
 } 
 
 
