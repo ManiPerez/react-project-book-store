@@ -3,7 +3,7 @@ import './styles.css';
 import { GiBookshelf } from 'react-icons/gi';
 import CartWidget from './CartWidget';
 
-const labels = [{category: 'Aventura'}, {category: 'Policial'}, {category: 'Fantasía'}, {category: 'Ciencia Ficción'}, {category: 'Romance'} , {category: 'Misterio'}]
+const labels = [{category: 'Aventura'}, {category: 'Ciencia Ficción'}, {category: 'Fantasía'}, {category: 'Misterio'}, {category: 'Romance'}, {category: 'Terror'}]
 
 const NavLinks = (props) => {
 

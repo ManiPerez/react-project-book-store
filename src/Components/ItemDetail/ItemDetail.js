@@ -16,6 +16,7 @@ const ItemDetail = ({ product }) => {
                   <th>Autor</th>
                   <th>Categoría</th>
                   <th>Precio</th>
+                  <th>Stock</th>
               </tr>
             </thead>
             <tbody>
@@ -23,10 +24,11 @@ const ItemDetail = ({ product }) => {
                   <td>{product.id}</td>
                   <td><img src={product.img} alt={product.title} /></td>
                   <td>{product.title}</td>
-                  <td>{product.details}</td>
+                  <td>{product.description}</td>
                   <td>{product.author}</td>
                   <td>{product.category}</td>
-                  <td>{product.price}</td>
+                  <td>$ {product.price}</td>
+                  <td>{product.status}</td>
               </tr>
             </tbody>
         </table>
