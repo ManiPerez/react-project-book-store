@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-const ItemDetail = ({ product }) => {
+const ItemDetail = ({ books }) => {
 
   return (
 
@@ -21,14 +21,14 @@ const ItemDetail = ({ product }) => {
             </thead>
             <tbody>
               <tr>
-                  <td>{product.id}</td>
-                  <td><img src={product.img} alt={product.title} /></td>
-                  <td>{product.title}</td>
-                  <td>{product.description}</td>
-                  <td>{product.author}</td>
-                  <td>{product.category}</td>
-                  <td>$ {product.price}</td>
-                  <td>{product.status}</td>
+                  <td>{books.rank}</td>
+                  <td><img src={books.book_image} alt={books.title} /></td>
+                  <td>{books.title}</td>
+                  <td>{books.description}</td>
+                  <td>{books.author}</td>
+                  <td>{books.category}</td>
+                  <td>$ {books.price}</td>
+                  <td>{books.age_group}</td>
               </tr>
             </tbody>
         </table>

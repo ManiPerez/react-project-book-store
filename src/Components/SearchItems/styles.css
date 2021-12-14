@@ -1,0 +1,32 @@
+.search-area {
+    min-width: 350px;
+    align-content: center;
+    padding: 4rem 0;
+}
+
+.search-area form {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #dfdfdf;
+    border-radius: .5rem;
+}
+
+.search-area input {
+    color: #4f546c;
+    font-size: 1.5rem;
+    padding: .5rem 1.3rem;
+}
+
+.search-btn {
+    background: hsl(54, 100%, 50%);
+    color: #161d34;
+    font-size: 2rem;
+    align-self: center;
+    border: none;
+    padding: .5rem 1.3rem;
+}
+
+.search-btn:hover {
+    background: hsl(54, 57%, 53%);
+    color: #fff;
+}

@@ -2,11 +2,11 @@ import React from 'react';
 import './styles.css';
 import Item from '../Item/Item';
   
-const ItemList = ({ products }) => {
+const ItemList = ({ books }) => {
     return (
         <div className="container">
-          {products.map(product => 
-              <Item key={product.id} product={product} />
+          {books.map(book => 
+              <Item key={book.rank} book={book} />
               )}  
         </div>
     )

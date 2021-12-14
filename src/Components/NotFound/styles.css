@@ -1,0 +1,9 @@
+.not-found {
+    justify-content: center;
+}
+
+.not-found h4 {
+    text-align: center;
+    color: #161d34;
+    font-size: 2rem;
+}
