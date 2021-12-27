@@ -1,7 +1,8 @@
 import React from 'react';
+import './styles.css';
+import ItemCount from '../../Components/ItemCount/ItemCount';
 import { getProducts } from '../../products';
-import ItemCount from '../ItemCount/ItemCount';
-import ItemList from '../ItemList/ItemList';
+import ItemList from '../../Components/ItemList/ItemList';
 import { useEffect, useState } from 'react';
 
 const ItemListContainer = () => {
@@ -19,15 +20,10 @@ const ItemListContainer = () => {
     }, [])
 
     return (
-        <section>
-            <div className="container">
-
-                <ItemList products={products} />
-                <ItemCount />
-                
-
-            </div>
-        </section>   
+        <div className='container'>
+            <ItemCount /> 
+            <ItemList products={products} />                           
+        </div>
     )
 }
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import ItemListContainer from './Containers/ItemListContainer/ItemListContainer';
 import Navbar from './Components/Navbar/Navbar';
-import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
+import ItemDetailContainer from './Containers/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemDetail from '../ItemDetail/ItemDetail';
+import ItemDetail from '../../Components/ItemDetail/ItemDetail';
 import { getItems } from '../../products';
 import { useEffect, useState } from 'react';
 
@@ -18,11 +18,11 @@ const ItemDetailContainer = () => {
     }, [])
 
     return (
-        <section>
+        <div>
 
             <ItemDetail key={products.id} product={products}/>
 
-        </section>   
+        </div>   
     )
 }
 

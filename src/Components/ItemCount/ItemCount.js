@@ -4,40 +4,33 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { FiPlusCircle, FiMinusCircle } from 'react-icons/fi';
 
 
-const ItemCount = ({getInitial, getStock, onAdd}) => {
-    const [count, setCount] = useState(getInitial);
-    const[stock] = useState(getStock);
-    const[message] = useState(onAdd);
+const ItemCount = ({initial = 0, stock = 0, onAdd}) => {
+    const [quantity, setQuantity] = useState(initial)
 
     const increment = () => {
-        if (count >= 0 && count < stock){
-            setCount(count + 1);
+
+        if (quantity < stock) {
+            setQuantity(quantity+1)
         }
     }
 
     const decrement = () => {
-        if (count > 1){
-            setCount(count - 1);
-        }
-    }
+       if (quantity > 0) {
+           setQuantity(quantity - 1)
+       }     
+   }
 
-    const msg = () => {
-        if (count >= 0 && count < stock){
-            setCount(count + 1);
-        }
-        console.log(`${message} ${count}`)
-    }
     return (
 
         <div className="item-count-box">
             <FaShoppingCart className="item-count-icon"/>
             <h3>Carrito</h3>
             <div className="container-counter">
-                <div onClick={increment}><FiPlusCircle className="cart-icon" /></div>
-                <div className="cart-counter"><p>{count}</p></div>
-                <div onClick={decrement}><FiMinusCircle className="cart-icon" /></div>
+                <div onClick={() => increment() }><FiPlusCircle className="cart-icon" /></div>
+                <div className="cart-counter"><p>{quantity}</p></div>
+                <div onClick={()=> decrement() }><FiMinusCircle className="cart-icon" /></div>
             </div>
-            <a href="/#" className="btn" onClick={msg}>Ver detalle</a>
+            <a href="/#" className="btn" onClick={() => increment() }>Ver detalle</a>
         </div>
     )
 }
