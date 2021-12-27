@@ -16,7 +16,7 @@ const products = [
         "author": "Arthur Conan Doyle", 
         "category": "Misterio",
         "price": 650, 
-        "img": "images/sherlock-holmes.jpg",
+        "img": "images/las-aventuras-de-sherlock-holmes.jpg",
         "stock": 34,
         "label": "Clasicos",
         "description": "Las aventuras de Sherlock Holmes es una colección de doce cuentos escritos por Arthur Conan Doyle, en los que el personaje principal es el detective de ficción Sherlock Holmes."
