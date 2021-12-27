@@ -44,6 +44,7 @@
 .product-img {
     width: 100px;
     height: 160px;
+    border: 1px solid var(--clr-gray300);
     margin-bottom: .5rem;
 }
 
