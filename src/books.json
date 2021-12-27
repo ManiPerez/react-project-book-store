@@ -1,4 +1,4 @@
-const products = [
+[
     {
         "id": 1,
         "title": "El Principito", 
@@ -219,21 +219,4 @@ const products = [
         "label": "Tendencia",
         "description": "Durante los últimos años, Mark Manson -en su popular blog- se ha afanado en corregir nuestras delirantes expectativas sobre nosotros mismos y el mundo. Ahora nos ofrece su toda su intrépida sabiduría en este libro pionero."
     }
-] 
-
-export const getProducts = () => {
-    return new Promise((resolve,reject) => {
-        setTimeout(() => {
-            resolve(products)
-        }, 1000)
-    })
-}
-
-export const getItems = () => {
-    return new Promise((resolve,reject) => {
-        setTimeout(() => {
-            resolve(products[0])
-        }, 2000)
-    })
-}
-
+]
