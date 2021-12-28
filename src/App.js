@@ -1,18 +1,31 @@
 import React from 'react';
 import './App.css';
-import ItemListContainer from './Containers/ItemListContainer/ItemListContainer';
-import Navbar from './Components/Navbar/Navbar';
-import ItemDetailContainer from './Containers/ItemDetailContainer/ItemDetailContainer';
+import Navbar from './Components/Navbar/Navbar'
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './Components/ItemListContainer/ItemListContainer';
+import ItemCount from './Components/ItemCount/ItemCount';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Notification from './Components/Notification/Notification';
+import { NotificationContextProvider } from './Context/NotificationContext';
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar />
-      <ItemListContainer />
-      <ItemDetailContainer />
+const App = () => {
 
-    </div>
-  );
+    return (
+      <div className="App">
+        <NotificationContextProvider>
+            <BrowserRouter>
+              <Navbar />
+              <Notification/>
+              <Routes>
+                <Route path='/' element={<ItemListContainer/>}/>
+                <Route path='category/:categoryId' element={<ItemListContainer/>} />
+                <Route path='detail/:paramId' element={<ItemDetailContainer />} />
+                <Route path='count' element={<ItemCount/>} />
+              </Routes>
+            </BrowserRouter>
+        </NotificationContextProvider>
+      </div>
+    );
 }
 
 export default App;

@@ -1,34 +1,34 @@
 import React from 'react';
-import './styles.css';
+import { useEffect, useState } from 'react';
+import './Navbar.css';
 import { GiBookshelf } from 'react-icons/gi';
-import CartWidget from './CartWidget';
+import CartWidget from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
+import { getCategories } from '../../products'
 
-const labels = [{category: 'Aventura'}, {category: 'Ciencia Ficción'}, {category: 'Fantasía'}, {category: 'Misterio'}, {category: 'Romance'}, {category: 'Terror'}]
+const NavBar = () => { 
+    const [categories, setCategories] = useState([])
 
-const NavLinks = (props) => {
-
-  const {label} = props
-
-  return (
-    <li><a href="/#">{label}</a></li>
-  )
-}
-
-const Navbar = () => {
+    useEffect(() => {
+      getCategories().then(categories => {
+        setCategories(categories)
+      })
+    },[])
+    console.log(categories)
     return (
         <nav className="navbar">
-            <a href="/#" className="navbar__brand"><GiBookshelf className="navbar__logo"/> The Book Corner</a>   
-            <div className="navbar__menu">
-                <ul>
-                {labels.map(label => 
-                    <NavLinks label={label.category} />
-                    )} 
-                </ul>
-
-                <CartWidget />
-            </div>                   
+          <div>
+              <Link className="navbar__brand" to={'/'}>
+                <GiBookshelf className="navbar__logo"/>
+                <h3> The Book Corner</h3>
+              </Link>
+          </div>
+          <div className="navbar__categories">
+            {categories.map(cat => <Link key={cat.id} className='navbar__category' to={`/category/${cat.id}`}>{cat.description}</Link>)}
+          </div>
+          <CartWidget />
         </nav>
     )
 }
 
-export default Navbar;
+export default NavBar

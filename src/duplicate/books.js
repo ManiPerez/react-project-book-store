@@ -201,7 +201,7 @@ const products = [
         id: 19,
         title: "Todos deberíamos ser feministas", 
         author: "Chimamanda Ngozi Adichie", 
-        category: "Autoayuda",
+        category: "Contemporaneo",
         price: 1.578, 
         img: "images/todos-deberiamos-ser-feministas.jpg",
         stock: 69,
@@ -222,44 +222,27 @@ const products = [
 ]
 
 const categories = [
-    {id: 'AYU', description: 'Autoayuda'},
-    {id: 'AVEN', description: 'Aventura'}, 
-    {id: 'CF', description: 'Ciencia Ficción'}, 
-    {id: 'DIS', description: "Diseño"},
+    {id: 'AVE', description: 'Aventura'}, 
+    {id: 'FIC', description: 'Ciencia Ficción'}, 
     {id: 'FAN', description: 'Fantasía'}, 
     {id: 'MIS', description: 'Misterio'}, 
-    {id: 'PROG', description: 'Programación'},
     {id: 'ROM', description: 'Romance'}, 
     {id: 'TER', description: 'Terror'}
 ]
 
-export const getCategories = () => {    
-    return new Promise((resolve, reject) => {
+export const getProducts = () => {
+    return new Promise((resolve,reject) => {
         setTimeout(() => {
-            resolve(categories)
-        }, 5000)        
+            resolve(products)
+        }, 1000)
     })
 }
 
-export const getProducts = (category) => {    
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            category ? resolve(products.filter(product => product.category === category)) : resolve(products)
-        }, 1000)        
-    })
-}
-
-export const getProductById = (id) => {  
-    return new Promise((resolve, reject) => {
-        const product = products.find(prod => parseInt(prod.id) === parseInt(id))
-        setTimeout(() => resolve(product), 1000)
-    })
-}
-
-export const getItem = () => {    
-    return new Promise((resolve, reject) => {
+export const getItems = () => {
+    return new Promise((resolve,reject) => {
         setTimeout(() => {
             resolve(products[0])
-        }, 3000)        
+        }, 2000)
     })
 }
+
