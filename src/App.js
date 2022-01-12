@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import Navbar from './Components/Navbar/Navbar'
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './Components/ItemListContainer/ItemListContainer';
-import ItemCount from './Components/ItemCount/ItemCount';
+import Navbar from './Components/Navbar/Navbar.jsx'
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer.jsx';
+import ItemDetailContainer from './Components/ItemListContainer/ItemListContainer.jsx';
+import ItemCount from './Components/ItemCount/ItemCount.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Notification from './Components/Notification/Notification';
-import { NotificationContextProvider } from './Context/NotificationContext';
+import Notification from './Components/Notification/Notification.jsx';
+import { NotificationContextProvider } from './Context/NotificationContext.jsx';
 
 const App = () => {
 

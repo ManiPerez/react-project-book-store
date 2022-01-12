@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useContext } from 'react';
-import './ItemDetail.css';
+import './styles.css';
 import NotificationContext from '../../context/NotificationContext';
 
 
@@ -60,17 +60,17 @@ const ItemDetail = ({ product, inputType = 'input' }) => {
         <div className="itemDetail">
             <table>
                 <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Portada</th>
-                    <th>Título</th>
-                    <th>Detalle</th>
-                    <th>Autor</th>
-                    <th>Categoría</th>
-                    <th>Precio</th>
-                    <th>Estado</th>
-                    <th>Stock</th>
-                </tr>
+                    <tr>
+                        <th>Id</th>
+                        <th>Portada</th>
+                        <th>Título</th>
+                        <th>Detalle</th>
+                        <th>Autor</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Estado</th>
+                        <th>Stock</th>
+                    </tr>
                 </thead>
                 <tbody>
                 <tr>

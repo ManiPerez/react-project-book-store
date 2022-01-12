@@ -45,7 +45,7 @@ const products = [
     },
     {
         id: 5,
-        title: "20000 leguas de viaje submarino", 
+        title: "20.000 Leguas de Viaje Submarino", 
         author: "Julio Verne", 
         category: "Aventura",
         price: 488, 
@@ -56,7 +56,7 @@ const products = [
     },
     {
         id: 6,
-        title: "El Señor de los Anillos - La comunidad del anillo", 
+        title: "El Señor de Los Anillos - La Comunidad del Anillo", 
         author: "J.R.R. Tolkien", 
         category: "Fantasía",
         price: 940, 
@@ -67,7 +67,7 @@ const products = [
     },
     {
         id: 7,
-        title: "El código Da Vinci", 
+        title: "El Código Da Vinci", 
         author: "Dan Brown", 
         category: "Misterio",
         price: 1200, 
@@ -89,7 +89,7 @@ const products = [
     },
     {
         id: 9,
-        title: "El arte de engañar al karma", 
+        title: "El Arte de Engañar al Karma", 
         author: "Elisabet Benavent", 
         category: "Romance",
         price: 1400, 
@@ -100,7 +100,7 @@ const products = [
     },
     {
         id: 10,
-        title: "La sombra del viento", 
+        title: "La Sombra del Viento", 
         author: "Carlos Ruiz Zafón", 
         category: "Misterio",
         price: 4323, 
@@ -111,7 +111,7 @@ const products = [
     },
     {
         id: 11,
-        title: "Harry Potter y la piedra filosofal", 
+        title: "Harry Potter y La Piedra Filosofal", 
         author: "J. K. Rowling", 
         category: "Fantasía",
         price: 2500, 
@@ -133,7 +133,7 @@ const products = [
     },
     {
         id: 13,
-        title: "El cuento de la criada", 
+        title: "El Cuento de La Criada", 
         author: "Margaret Atwood", 
         category: "Ciencia ficción",
         price: 1600, 
@@ -155,7 +155,7 @@ const products = [
     },
     {
         id: 15,
-        title: "Eloquent JavaScript: Una moderna introducción a la programación", 
+        title: "Eloquent JavaScript: Una Moderna Introducción a La Programación", 
         author: "Marijn Haverbeke", 
         category: "Programación",
         price: 4800, 
@@ -166,7 +166,7 @@ const products = [
     },
     {
         id: 16,
-        title: "Cracking the Coding Interview", 
+        title: "Cracking The Coding Interview", 
         author: "Gayle Laakmann McDowell", 
         category: "Programación",
         price: 5.479, 
@@ -199,7 +199,7 @@ const products = [
     },
     {
         id: 19,
-        title: "Todos deberíamos ser feministas", 
+        title: "Todos Deberíamos Ser Feministas", 
         author: "Chimamanda Ngozi Adichie", 
         category: "Autoayuda",
         price: 1.578, 

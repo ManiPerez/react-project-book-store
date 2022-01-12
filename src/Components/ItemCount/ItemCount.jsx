@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import './ItemCount.css';
+import './styles.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import { FiPlusCircle, FiMinusCircle } from 'react-icons/fi';
 
@@ -9,7 +9,7 @@ const ItemCount = ({initial = 0, stock = 0, onAdd})=> {
 
    const increment = () => {
        if(quantity < stock) {
-           setQuantity(quantity+1)
+           setQuantity(quantity + 1)
        }
    }
 
@@ -27,10 +27,10 @@ const ItemCount = ({initial = 0, stock = 0, onAdd})=> {
                 <div className="itemCount__counter">
                     <div onClick={() => increment() }><FiPlusCircle className="itemCount__quantity-btn" /></div>
                     <div className="itemCount__quantity"><p>{quantity}</p></div>
-                    <div onClick={()=> decrement() }><FiMinusCircle className="itemCount__quantity-btn" /></div>
+                    <div onClick={() => decrement() }><FiMinusCircle className="itemCount__quantity-btn" /></div>
                 </div>
                 <a href="/#" className="itemCount__btn" onClick={() => increment() }>Ver detalle</a>
-            </div>      
+            </div>   
        </div>
    )
 

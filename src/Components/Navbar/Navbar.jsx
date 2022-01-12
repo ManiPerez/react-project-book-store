@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import './Navbar.css';
+import './styles.css';
 import { GiBookshelf } from 'react-icons/gi';
 import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom'
