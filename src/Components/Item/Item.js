@@ -1,16 +1,11 @@
 import React from 'react';
 import './styles.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Item = ({ product }) => {
 
-    const handleClick = (evt) => {
-        evt.stopPropagation()
-        console.log(`hice click en Item ${product.id}`)
-    }
-
     return (
-        <div className="cardItem" onClick={handleClick}>
+        <article className="cardItem">
             <div className="cardItem__content">
                 <img className="cardItem__img" src={product.img} alt={product.title} />
                 <h3 className="cardItem__title">{product.title}</h3>
@@ -19,7 +14,7 @@ const Item = ({ product }) => {
                 <p className="cardItem__price">$ {product.price}</p>
             </div>
             <Link className="cardItem__btn" to={`/detail/${product.id}`}>Ver detalle</Link>
-        </div>
+        </article>
     )
 }
 

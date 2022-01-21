@@ -1,1 +1,9 @@
-Responsive eCommerce Website Using React js, With a beautiful user interface. It contains a Header, Home, Products, Categories Products, a Cart to purchase items, Contact and Footer sections. 
+# The Book Corner
+
+The Book Corner es una app web que simula la compra de libros a traves de una eCommerce. 
+
+Contiene:
+- Homepage con la Lista de todos los Libros (ItemList) 
+- NavBar con la Brand de la app, las categorias de Libros y el Contador del Carrito (CartWidget), 
+- Detalle de cada Libro (ItemDetail) 
+- Detalle del Carrito que muestra los Libros adquiridos (CartCount)

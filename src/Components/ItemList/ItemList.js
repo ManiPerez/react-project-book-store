@@ -1,9 +1,8 @@
 import React from 'react';
 import './styles.css'
-import Item from "../Item/Item"
+import Item from "../Item/Item";
 
-const ItemList = ({ products = []}) => {
-    console.log('Aca estan los productos en ItemList', products);
+const ItemList = ({ products = [] }) => {
 
     return (
         <div className="itemList">

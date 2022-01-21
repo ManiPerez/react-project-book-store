@@ -1,31 +1,27 @@
 import React from 'react';
-import './App.css';
-import Navbar from './Components/Navbar/Navbar.jsx'
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer.jsx';
-import ItemDetailContainer from './Components/ItemListContainer/ItemListContainer.jsx';
-import ItemCount from './Components/ItemCount/ItemCount.jsx';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Notification from './Components/Notification/Notification.jsx';
-import { NotificationContextProvider } from './Context/NotificationContext.jsx';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import NavBar from './Components/Navbar/Navbar';
+import ItemCount from './Components/ItemCount/ItemCount';
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
+import NotFound from './Components/NotFound/NotFound';
 
 const App = () => {
 
-    return (
-      <div className="App">
-        <NotificationContextProvider>
-            <BrowserRouter>
-              <Navbar />
-              <Notification/>
-              <Routes>
-                <Route path='/' element={<ItemListContainer/>}/>
-                <Route path='category/:categoryId' element={<ItemListContainer/>} />
-                <Route path='detail/:paramId' element={<ItemDetailContainer />} />
-                <Route path='count' element={<ItemCount/>} />
-              </Routes>
-            </BrowserRouter>
-        </NotificationContextProvider>
-      </div>
-    );
+  return (
+    <>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>       
+          <Route exact path='/' element={<ItemListContainer />}/>
+          <Route exact path='/category/:categoryId' element={<ItemListContainer />}/>
+          <Route exact path='/detail/:paramId' element={<ItemDetailContainer />} />
+          <Route exact path='/count' element={<ItemCount />}/>
+          <Route path='*' element={<NotFound />}/>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;

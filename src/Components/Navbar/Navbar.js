@@ -1,0 +1,34 @@
+import React from 'react';
+import { useEffect, useState } from 'react';
+import './styles.css';
+import { GiBookshelf } from 'react-icons/gi';
+import CartWidget from '../CartWidget/CartWidget';
+import { getCategories } from '../../products';
+import { NavLink } from 'react-router-dom';
+
+const NavBar = () => { 
+    const [categories, setCategories] = useState([])
+
+    useEffect(() => {
+      getCategories().then(categories => {
+        setCategories(categories)
+      })
+    },[])
+
+    return (
+      <nav className="navbar">
+        <div>
+          <NavLink to={'/'} className="navbar__brand">
+            <GiBookshelf className="navbar__logo"/>
+            <h3> The Book Corner</h3>
+          </NavLink>
+        </div>
+        <div className="navbar__categories">
+          {categories.map(cat => <NavLink to={`/category/${cat.id}`} className='navbar__category'>{cat.description}</NavLink>)}
+        </div>
+        <NavLink to={'/count'} className='navbar__category'><CartWidget /></NavLink>
+      </nav>
+    )
+}
+
+export default NavBar
