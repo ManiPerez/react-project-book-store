@@ -1,19 +1,20 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
 import ItemCount from '../ItemCount/ItemCount';
-import { CartContext } from '../../Context/CartContext';
 
 const ItemDetail = ( { product } ) => {
 
     const [cartCount, setCartCount] = useState(false);
 
-    const { addToCart } = useContext(CartContext);
+    const addToCart = () => {
+        setCartCount([]);
+    };
 
     const onConfirm = ( quantity ) => {
         
-        if(quantity > 1) {
-            addToCart(product, quantity);
+        if(quantity !== 0) {
+            addToCart(quantity);
             setCartCount(true);
         }      
     }
@@ -22,7 +23,7 @@ const ItemDetail = ( { product } ) => {
         <article className="itemDetail">
             <section className='itemDetail__box'>
                 <picture className='itemDetail__img'>
-                    <img src={product?.img} alt={product?.title} />
+                    <img src={product?.img} alt="Portada del libro" />
                 </picture>
                 <div className='itemDetail__info'>
                     <h2 className='itemDetail__title'>{product?.title}</h2>
