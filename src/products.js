@@ -177,70 +177,6 @@ const products = [
     },
     {
         id: 12,
-        title: "1984", 
-        author: "George Orwell", 
-        category: "Ciencia ficción",
-        categoryId: "ciencia-ficcion",
-        pages: 352,
-        editorial: "Debolsillo",
-        publication: 1949,
-        price: 1799, 
-        img: "/images/1984.jpg",
-        stock: 12,
-        label: "Clásico",
-        description: "1984 es una novela política de ficción distópica, escrita por George Orwell entre 1947 y 1948 y publicada el 8 de junio de 1949.",
-        reviews: "Seguramente las personas que compraron este libro ya saben que se trata de un clásico muy bien reconocido, así que sólo diré que la traducción está muy bien lograda; quizás algunas palabras como mono para overall le quitan fuerza a lo que el autor quiso decir, pero por lo demás está muy bien."
-    },
-    {
-        id: 13,
-        title: "El Cuento de La Criada", 
-        author: "Margaret Atwood",
-        category: "Ciencia ficción",
-        categoryId: "ciencia-ficcion",
-        pages: 297,
-        editorial: "Salamandra",
-        publication: 1985, 
-        price: 3199, 
-        img: "/images/el-cuento-de-la-criada.jpg",
-        stock: 13,
-        label: "Bestseller",
-        description: "El cuento de la criada, publicada en 1985, es una novela distópica y una de las obras más importantes de la escritora canadiense Margaret Atwood. En ella destaca la crítica social y el trato a la mujer, temas frecuentes en sus obras.",
-        reviews: "Tal como dice el titulo, es un cuento, tan bien contado que no notas como vas pasando de una pagina a otra. Lo mejor de todo es cuando ves el concepto de criada que tiene la autora, muy diferente al que manejamos en America Latina. Vale la pena leer."
-    },
-    {
-        id: 14,
-        title: "No Me Hagas Pensar", 
-        author: "Steve Krug",
-        category: "Diseño",
-        categoryId: "disenio", 
-        pages: 216,
-        editorial: "Anaya Multimedia",
-        publication: 2006, 
-        price: 5164, 
-        img: "/images/no-me-hagas-pensar.jpg",
-        stock: 14,
-        label: "Bestseller",
-        description: "Cientos de miles de diseñadores y desarrolladores web se han basado en la guía del gurú de usabilidad Steve Krug para ayudarles a entender los principios de la navegación intuitiva y diseño Web. Un libro eminentemente práctico, uno de los más queridos y más recomendados sobre el tema.",
-        reviews: "Este libro lo mejor que tiene es la descripción del metodo para realizar test de usuarios y medir si un diseño esta centrado en el usuario, siguiendo los pasos que ahí utilizan de forma muy amigable se obtiene resultados sorprendentes."
-    },
-    {
-        id: 15,
-        title: "Eloquent JavaScript", 
-        author: "Marijn Haverbeke", 
-        category: "Programación",
-        categoryId: "programacion",
-        pages: 472,
-        editorial: "No Starch Press",
-        publication: 2011,
-        price: 6799, 
-        img: "/images/eloquent-javascript.jpg",
-        stock: 15,
-        label: "Tendencia",
-        description: "JavaScript está en el corazón de casi todas las aplicaciones web modernas, ya sea Google Apps, Twitter o el último juego basado en el navegador. Aunque es sencillo para los principiantes, JavaScript no es un juguete: es un lenguaje flexible y complejo que puede utilizarse para crear aplicaciones a gran escala.",
-        reviews: "Es un tutorial de JavaScript inteligente y sencillo que existe en forma de libro impreso y una versión web gratuita con un buen formato... fácilmente la lectura más agradable de esta lista. Y hay tantas ideas útiles que no te aburrirás."
-    },
-    {
-        id: 16,
         title: "El Último Deseo", 
         author: "Andrzej Sapkowski",
         category: "Fantasía",
@@ -250,10 +186,74 @@ const products = [
         publication: 1993,
         price: 3334, 
         img: "/images/el-ultimo-deseo.jpg",
-        stock: 16,
+        stock: 12,
         label: "Tendencia",
         description: "Geralt de Rivia, brujo y mutante sobrehumano, se gana la vida como cazador de monstruos en una tierra de magia y maravilla: con sus dos espadas al hombro -la de acero para hombres, y la de plata para bestias- da cuenta de estriges, mantícoras, grifos, vampiros, quimeras y lobisomes, pero sólo cuando amenazan la paz. Irónico, cínico, descreído y siempre errante, sus pasos lo llevan de pueblo en pueblo ofreciendo sus servicios, hallando las más de las veces que los auténticos monstruos se esconden bajo rostros humanos. En su camino sorteará intrigas, elegirá el mal menor, debatirá cuestiones de precio, hollará el confín del mundo y realizará su último deseo: así comienzan las aventuras del brujo Geralt de Rivia.",
         reviews: "Si eres fan de los videojuegos de Witcher, de la producción de Netflix o un entusiasta de la literatura de fantasía, esta es una lectura buenisíma. La serie es más fiel a los libros que los juegos. La lectura es muy amena, por lo que te enganchas enseguida. Quizás lo único malo sería el precio de los tomos, pero valen la pena (es buena editorial). El libro llegó en perfecto estado."
+    },
+    {
+        id: 13,
+        title: "1984", 
+        author: "George Orwell", 
+        category: "Ciencia ficción",
+        categoryId: "ciencia-ficcion",
+        pages: 352,
+        editorial: "Debolsillo",
+        publication: 1949,
+        price: 1799, 
+        img: "/images/1984.jpg",
+        stock: 13,
+        label: "Clásico",
+        description: "1984 es una novela política de ficción distópica, escrita por George Orwell entre 1947 y 1948 y publicada el 8 de junio de 1949.",
+        reviews: "Seguramente las personas que compraron este libro ya saben que se trata de un clásico muy bien reconocido, así que sólo diré que la traducción está muy bien lograda; quizás algunas palabras como mono para overall le quitan fuerza a lo que el autor quiso decir, pero por lo demás está muy bien."
+    },
+    {
+        id: 14,
+        title: "El Cuento de La Criada", 
+        author: "Margaret Atwood",
+        category: "Ciencia ficción",
+        categoryId: "ciencia-ficcion",
+        pages: 297,
+        editorial: "Salamandra",
+        publication: 1985, 
+        price: 3199, 
+        img: "/images/el-cuento-de-la-criada.jpg",
+        stock: 14,
+        label: "Bestseller",
+        description: "El cuento de la criada, publicada en 1985, es una novela distópica y una de las obras más importantes de la escritora canadiense Margaret Atwood. En ella destaca la crítica social y el trato a la mujer, temas frecuentes en sus obras.",
+        reviews: "Tal como dice el titulo, es un cuento, tan bien contado que no notas como vas pasando de una pagina a otra. Lo mejor de todo es cuando ves el concepto de criada que tiene la autora, muy diferente al que manejamos en America Latina. Vale la pena leer."
+    },
+    {
+        id: 15,
+        title: "No Me Hagas Pensar", 
+        author: "Steve Krug",
+        category: "Diseño",
+        categoryId: "disenio", 
+        pages: 216,
+        editorial: "Anaya Multimedia",
+        publication: 2006, 
+        price: 5164, 
+        img: "/images/no-me-hagas-pensar.jpg",
+        stock: 15,
+        label: "Bestseller",
+        description: "Cientos de miles de diseñadores y desarrolladores web se han basado en la guía del gurú de usabilidad Steve Krug para ayudarles a entender los principios de la navegación intuitiva y diseño Web. Un libro eminentemente práctico, uno de los más queridos y más recomendados sobre el tema.",
+        reviews: "Este libro lo mejor que tiene es la descripción del metodo para realizar test de usuarios y medir si un diseño esta centrado en el usuario, siguiendo los pasos que ahí utilizan de forma muy amigable se obtiene resultados sorprendentes."
+    },
+    {
+        id: 16,
+        title: "Eloquent JavaScript", 
+        author: "Marijn Haverbeke", 
+        category: "Programación",
+        categoryId: "programacion",
+        pages: 472,
+        editorial: "No Starch Press",
+        publication: 2011,
+        price: 6799, 
+        img: "/images/eloquent-javascript.jpg",
+        stock: 16,
+        label: "Tendencia",
+        description: "JavaScript está en el corazón de casi todas las aplicaciones web modernas, ya sea Google Apps, Twitter o el último juego basado en el navegador. Aunque es sencillo para los principiantes, JavaScript no es un juguete: es un lenguaje flexible y complejo que puede utilizarse para crear aplicaciones a gran escala.",
+        reviews: "Es un tutorial de JavaScript inteligente y sencillo que existe en forma de libro impreso y una versión web gratuita con un buen formato... fácilmente la lectura más agradable de esta lista. Y hay tantas ideas útiles que no te aburrirás."
     },
     {
         id: 17,
@@ -353,13 +353,6 @@ export const getProductById = (id) => {
     return new Promise((resolve, reject) => {
         const product = products.find(prod => parseInt(prod.id) === parseInt(id))
         setTimeout(() => resolve(product), 1000)
-    })
-}
-
-export const getProductsByCategory = (categoryId) => {  
-    return new Promise((resolve, reject) => {
-        const product = products.filter(prod => prod.categoryId === categoryId)
-        setTimeout(() => resolve(product), 500)
     })
 }
 

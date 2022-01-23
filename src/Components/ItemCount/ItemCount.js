@@ -1,38 +1,42 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './styles.css';
-import { FaShoppingCart } from 'react-icons/fa';
 import { FiPlusCircle, FiMinusCircle } from 'react-icons/fi';
 
-const ItemCount = ({initial = 0, stock = 43})=> {
-   const [quantity, setQuantity] = useState(initial)
+const ItemCount = ({ onConfirm, maxQuantity })=> {
+    
+    const [count, setCount] = useState(0);
 
-   const increment = () => {
-       if(quantity < stock) {
-           setQuantity(quantity + 1)
-       }
-   }
+    const increment = () => {
+        if(count < maxQuantity) {
+            setCount(count + 1)
+        }
+    }
 
-   const decrement = () => {
-       if(quantity > 0) {
-           setQuantity(quantity - 1)
-       }     
-   }
-   
-   return(
-       <div align="center">          
+    const decrement = () => {
+        if(count > 0) {
+            setCount(count - 1)
+        }
+    }
+
+    return( 
+
+        <div>
             <div className="itemCount">
-                <FaShoppingCart className="itemCount__icon"/>
-                <h3>Carrito</h3>
-                <div className="itemCount__counter">
-                    <div onClick={() => decrement() }><FiMinusCircle className="itemCount__quantity-btn" /></div>
-                    <div className="itemCount__quantity"><p>{quantity}</p></div>
-                    <div onClick={() => increment() }><FiPlusCircle className="itemCount__quantity-btn" /></div>
-                </div>
-                <a href="/#" className="itemCount__btn" onClick={() => increment() }>Ver detalle</a>
-            </div>   
-       </div>
-   )
-
+                <button className="itemCount__quantity-btn" onClick={decrement}>
+                    <FiMinusCircle className="itemCount__quantity-icon" />
+                </button>
+                <span className="itemCount__quantity">
+                    {count}
+                </span>
+                <button className="itemCount__quantity-btn" onClick={increment}>
+                    <FiPlusCircle className="itemCount__quantity-icon" />
+                </button>
+            </div> 
+            <div className="itemCount__btn">
+                <button onClick={() => onConfirm(count)}>Agregar al carrito</button>
+            </div>
+        </div>       
+    )
 }
+
 export default ItemCount

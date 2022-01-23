@@ -1,28 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import ItemList from '../ItemList/ItemList';
-import { getProducts, getProductsByCategory } from '../../products';
 import { useParams } from 'react-router-dom';
+import ItemList from '../ItemList/ItemList';
+import { getProducts } from '../../products';
+
 
 const ItemListContainer = () => {
+
     const [products, setProducts] = useState([])
 
-    const { categoryId } = useParams([]);
+    const { categoryId } = useParams();
 
     useEffect(() => {     
 
-        if (categoryId !== undefined) {
+        getProducts(categoryId).then(list => {
+            setProducts(list)
 
-            const list = getProductsByCategory(categoryId)
-            list.then(list => {
-                setProducts(list)
-            })
-
-        } else {
-            const list = getProducts()
-            list.then(list => {
-                setProducts(list)
-            })
-        }
+        }).catch(err => {
+            console.log(err);
+        })   
 
         return (() => {
             setProducts([])

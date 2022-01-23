@@ -1,18 +1,22 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './styles.css';
 import { GiBookshelf } from 'react-icons/gi';
 import CartWidget from '../CartWidget/CartWidget';
 import { getCategories } from '../../products';
-import { NavLink } from 'react-router-dom';
+
 
 const NavBar = () => { 
+
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
+
       getCategories().then(categories => {
+
         setCategories(categories)
       })
+      
     },[])
 
     return (
@@ -26,7 +30,7 @@ const NavBar = () => {
         <div className="navbar__categories">
           {categories.map(cat => <NavLink to={`/category/${cat.id}`} className='navbar__category'>{cat.description}</NavLink>)}
         </div>
-        <NavLink to={'/count'} className='navbar__category'><CartWidget /></NavLink>
+        <NavLink to={'/cart'} className='navbar__category'><CartWidget /></NavLink>
       </nav>
     )
 }

@@ -109,23 +109,29 @@
   padding-top: .5rem;
 }
 
-.itemDetail__button {
+.itemDetail__btn {
   display: flex;
   justify-content: center;
 }
 
-.itemDetail__button button {
+.itemDetail__cartLink {
   color: var(--first-color-second);
   background-color: transparent;
   border: 1px solid var(--first-color-second);
   border-radius: .5rem;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   padding: .7rem 2rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
-.itemDetail__button button:hover {
+.itemDetail__cartLink:hover {
   color: var(--container-color);
   background-color: var(--first-color);
 }
+
+
+
+
+
+
