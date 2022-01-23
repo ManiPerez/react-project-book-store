@@ -1,21 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.css';
 import { FiPlusCircle, FiMinusCircle } from 'react-icons/fi';
 
-const ItemCount = ({ onConfirm, maxQuantity })=> {
-    
-    const [count, setCount] = useState(0);
+const ItemCount = ({ maxQuantity, count, setCount, onAddToCart })=> {
 
     const increment = () => {
-        if(count < maxQuantity) {
-            setCount(count + 1)
-        }
+        count < maxQuantity && setCount(count + 1)
     }
 
     const decrement = () => {
-        if(count > 0) {
-            setCount(count - 1)
-        }
+        count > 0 && setCount(count - 1)
     }
 
     return( 
@@ -33,7 +27,7 @@ const ItemCount = ({ onConfirm, maxQuantity })=> {
                 </button>
             </div> 
             <div className="itemCount__btn">
-                <button onClick={() => onConfirm(count)}>Agregar al carrito</button>
+                <button onClick={onAddToCart}>Agregar al carrito</button>
             </div>
         </div>       
     )

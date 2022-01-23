@@ -75,6 +75,13 @@
   padding-bottom: .3rem;
 }
 
+.itemDetail__stock {
+  color: var(--clr-paid-font);
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-bottom: .3rem;
+}
+
 .itemDetail__publication {
   color: var(--text-color);
   font-size: 1.3rem;
