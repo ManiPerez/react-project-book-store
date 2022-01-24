@@ -3,6 +3,7 @@ import './styles.css';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { getProductById } from '../../products';
 import { useParams } from 'react-router-dom';
+import Loader from '../Loader/Loader';
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState();
@@ -24,7 +25,11 @@ const ItemDetailContainer = () => {
 
     return (
         <div className="ItemListContainer">
+            {product !== undefined ?
             <ItemDetail product={product} />
+            :
+            <Loader/>
+            }
         </div>
     )       
 }

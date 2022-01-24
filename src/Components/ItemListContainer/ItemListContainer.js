@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
 import { getProducts } from '../../products';
+import Loader from '../Loader/Loader';
 
 
 const ItemListContainer = () => {
@@ -26,8 +27,12 @@ const ItemListContainer = () => {
     }, [categoryId])
 
     return (
-        <div className="ItemListContainer">
+        <div className="ItemListContainer">         
+            {products.length !== 0 ?
             <ItemList products={products} />
+            :
+            <Loader/>
+            }
         </div>
     )    
     
