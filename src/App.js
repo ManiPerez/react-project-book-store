@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './Context/CartContext';
 import NavBar from './Components/Navbar/Navbar';
-import CartView from './Components/CartView/CartView';
+import Cart from './Components/Cart/Cart';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import Payment from './Components/Payment.js/Payment';
@@ -19,7 +19,7 @@ const App = () => {
             <Route exact path='/' element={<ItemListContainer />}/>
             <Route path='category/:categoryId' element={<ItemListContainer />}/>
             <Route path='detail/:paramId' element={<ItemDetailContainer />} />
-            <Route path='cart' element={<CartView />}/>
+            <Route path='cart' element={<Cart />}/>
             <Route path='payment' element={<Payment />}/>
             <Route path='*' element={<NotFound />}/>
           </Routes>
