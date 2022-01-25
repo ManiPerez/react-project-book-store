@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import './styles.css';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { getProductById } from '../../products';
-import { useParams } from 'react-router-dom';
 import Loader from '../Loader/Loader';
 
 const ItemDetailContainer = () => {
