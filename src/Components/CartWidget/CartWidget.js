@@ -1,19 +1,16 @@
-import React, {useState} from 'react';
+import React, { useContext} from 'react';
 import './styles.css';
 import { FaShoppingCart } from 'react-icons/fa';
+import { CartContext } from '../../Context/CartContext';
 
 const CartWidget = () => {
 
+    const {totalCartCount} = useContext(CartContext);
 
-    const [counter,setCounter] = useState(0);
-
-    const counterCount = () => {
-        setCounter(counter + 1)
-    }
     return(
-        <button className="cartWidget" onClick={counterCount} >
+        <button className="cartWidget">
             <FaShoppingCart className="cartWidget__icon"/>
-            <div className="cartWidget__counter">{counter}</div>
+            <span className="cartWidget__counter">{totalCartCount()}</span>
         </button>
     );
 }

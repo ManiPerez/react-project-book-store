@@ -55,6 +55,11 @@
   font-weight: 500;
 }
 
+.itemDetail__label {
+  display: flex;
+  gap: 1.5rem;
+}
+
 .itemDetail__category {
   margin-bottom: 1rem;
 }
@@ -75,25 +80,20 @@
   padding-bottom: .3rem;
 }
 
-.itemDetail__stock {
+.itemDetail__text {
+  color: var(--text-color);
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-bottom: .3rem;
+}
+
+.stock {
   color: var(--clr-paid-font);
-  font-size: 1.3rem;
-  font-weight: 400;
-  padding-bottom: .3rem;
 }
 
-.itemDetail__publication {
-  color: var(--text-color);
-  font-size: 1.3rem;
-  font-weight: 400;
-  padding-bottom: .3rem;
-}
-
-.itemDetail__pages {
-  color: var(--text-color);
-  font-size: 1.3rem;
-  font-weight: 400;
-  padding-bottom: .3rem;
+.label {
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .itemDetail__description {

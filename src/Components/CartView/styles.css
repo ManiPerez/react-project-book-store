@@ -1,0 +1,145 @@
+.cartView {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: .5rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: var(--container-color);
+    text-align: left;
+    overflow: hidden;
+}
+  
+table thead {
+    background-color: var(--clr-gray700);
+    box-shadow: 0 5px 10px var(--clr-gray300);
+}
+  
+table th {
+    color: var(--first-color);
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+  
+table td {
+    color: var(--clr-gray600);
+    padding: .5rem 2rem;
+    font-size: 1.6rem;
+    border-bottom: 1px solid var(--clr-gray300);
+}
+  
+table td img {
+    width: 60px;
+    height: 90px;
+    padding-top: 1rem;
+}
+
+td ul {
+    list-style: none;
+}
+
+td ul li h3 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+td ul li p {
+    font-size: 1.3rem;
+}
+
+.cartView__quantity {
+    text-align: center;
+}
+
+td button {
+    background-color: transparent;
+    color: var(--first-color-second);
+    font-size: 2rem;
+}
+
+td button:hover {
+    color: var(--first-color);
+}
+
+.cartView__total th {
+    color: var(--first-color-second);
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.cartView__total th h4 {
+    font-weight: 400;
+    text-align: right;
+}
+
+.cartView__total th p {
+    text-align: center;
+}
+
+.cartView__btns {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding: 1.5rem 0;
+}
+
+.btn {
+    color: var(--first-color-second);
+    border: 1px solid var(--first-color-second);
+    border-radius: .5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: .7rem 2rem;
+}
+
+.btn:hover {
+    color: var(--container-color);
+}
+
+.buy {
+    background-color: var(--first-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.buy:hover {
+    background-color: var(--clr-paid-font);
+}
+
+.delete {
+    background-color: transparent;
+}
+
+.delete:hover {
+    background-color: var(--clr-unpaid-font);
+}
+
+.cartView__empty {
+    text-align: center;
+    padding: 3rem;
+}
+
+.cartView__empty h2 {
+    font-size: 2rem;
+    color: var(--title-color);
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+.cart {
+    background-color: var(--first-color);
+    font-size: 1.6rem;
+}
+
+.cart:hover {
+    background-color: var(--first-color-alt);
+}
+
