@@ -5,7 +5,7 @@ import NavBar from './Components/Navbar/Navbar';
 import Cart from './Components/Cart/Cart';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
-import Payment from './Components/Payment.js/Payment';
+import ShoppingCompleted from './Components/ShoppingCompleted.js/ShoppingCompleted';
 import NotFound from './Components/NotFound/NotFound';
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
             <Route path='category/:categoryId' element={<ItemListContainer />}/>
             <Route path='detail/:paramId' element={<ItemDetailContainer />} />
             <Route path='cart' element={<Cart />}/>
-            <Route path='payment' element={<Payment />}/>
+            <Route path='shopping-completed' element={<ShoppingCompleted />}/>
             <Route path='*' element={<NotFound />}/>
           </Routes>
         </BrowserRouter>

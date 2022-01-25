@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react';
+import { CartContext } from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
 import './styles.css';
 import ItemCount from '../ItemCount/ItemCount';
-import { CartContext } from '../../Context/CartContext';
 
 const ItemDetail = ( { product } ) => {
 
-    const {addToCartItem, onCart} = useContext(CartContext)
+    const {addToCartItem, onCart} = useContext(CartContext);
 
     const [count, setCount] = useState(0);
 
@@ -37,7 +37,9 @@ const ItemDetail = ( { product } ) => {
                         <p className='itemDetail__text label'>{product?.label}</p>
                     </div>                   
                     <p className='itemDetail__price'>${product?.price}</p>                   
-                    <p className='itemDetail__text stock'>{product?.stock} unidades disponibles</p>                  
+                    <p className='itemDetail__text stock'>
+                        {product?.stock !== 1 ? `${product?.stock} unidades disponibles` : `${product?.stock} unidad disponible`}
+                    </p>                  
                     <p className='itemDetail__text'>Editorial: {product?.editorial}</p>
                     <p className='itemDetail__text'>Páginas: {product?.pages}</p>
                     <p className='itemDetail__text'>Año de publicación: {product?.publication}</p>
@@ -54,10 +56,10 @@ const ItemDetail = ( { product } ) => {
                                         onAddToCart={handleAddToCart} 
                                     /> 
                                 :
-                                    <Link className="itemDetail__cartLink" to="/cart">Ver carrito</Link>
+                                    <Link className="itemDetail__cartLink" to="/cart">Ver carrito</Link>         
                         }                                   
                     </div>          
-                </div>
+                </div>               
             </section>
         </article>
     )

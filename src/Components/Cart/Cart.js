@@ -41,7 +41,7 @@ const Cart = () => {
               <tr>
                 <th colspan="5">
                   <div className='cartView__btns'>
-                    <Link className='btn buy' to='/payment'>Finalizar compra</Link>
+                    <Link className='btn buy' to='/shopping-completed' onClick={emptyCart}>Finalizar compra</Link>
                     <button className='btn delete' onClick={emptyCart}>Vaciar carrito</button>
                   </div>
                 </th>

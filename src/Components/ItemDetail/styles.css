@@ -123,7 +123,7 @@
 
 .itemDetail__cartLink {
   color: var(--first-color-second);
-  background-color: transparent;
+  background-color: var(--first-color);
   border: 1px solid var(--first-color-second);
   border-radius: .5rem;
   font-size: 1.4rem;
@@ -134,7 +134,7 @@
 
 .itemDetail__cartLink:hover {
   color: var(--container-color);
-  background-color: var(--first-color);
+  background-color: var(--first-color-alt);
 }
 
 

@@ -4,17 +4,21 @@ import ItemList from '../ItemList/ItemList';
 import { getProducts } from '../../products';
 import Loader from '../Loader/Loader';
 
-
 const ItemListContainer = () => {
 
     const [products, setProducts] = useState([])
+ 
+    const [loading, setLoading] = useState(true);
 
     const { categoryId } = useParams();
 
     useEffect(() => {     
 
         getProducts(categoryId).then(list => {
+
             setProducts(list)
+            
+            setLoading(false)
 
         }).catch(err => {
             console.log(err);
@@ -28,10 +32,10 @@ const ItemListContainer = () => {
 
     return (
         <div className="ItemListContainer">         
-            {products.length !== 0 ?
-            <ItemList products={products} />
+            {loading ?
+            <Loader/>           
             :
-            <Loader/>
+            <ItemList products={products} />
             }
         </div>
     )    

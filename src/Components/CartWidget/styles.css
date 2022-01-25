@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
-    color: var(--first-color);
+    background: var(--first-color);
+    color: var(--first-color-second);
     border: 1px solid var(--first-color);
     border-radius: .5rem;
     padding: .5rem 1rem;
@@ -17,11 +17,29 @@
 
 .cartWidget__counter {
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 500;
+}
+
+.cartWidget__empty {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    color: var(--first-color);
+    font-size: 2.3rem;
+    border: 1px solid var(--first-color);
+    border-radius: .5rem;
+    padding: .7rem 1rem;
+    cursor: pointer;
 }
   
 .cartWidget:hover {
-    background: var(--first-color);
-    color: var(--first-color-second);
+    background: var(--first-color-alt);
+    color: var(--container-color);
+    transition: .3s;
+} 
+
+.cartWidget__empty:hover {
+    background: var(--first-color-alt);
+    color: var(--container-color);
     transition: .3s;
 } 

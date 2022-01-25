@@ -6,29 +6,35 @@ import { getProductById } from '../../products';
 import Loader from '../Loader/Loader';
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState();
+    const [product, setProduct] = useState([]);
+
+    const [loading, setLoading] = useState(true);
 
     const { paramId } = useParams();
 
     useEffect(() => {        
         getProductById(paramId).then(item => {
+
             setProduct(item)
+
+            setLoading(false)
+            
         }).catch(err => {
             console.log(err);
         })
 
         return (() => {
-            setProduct()
+            setProduct([])
         })
         
     }, [paramId])
 
     return (
         <div className="ItemListContainer">
-            {product !== undefined ?
-            <ItemDetail product={product} />
+            {loading ?
+            <Loader/>           
             :
-            <Loader/>
+            <ItemDetail product={product} />
             }
         </div>
     )       

@@ -5,7 +5,6 @@ import { GiBookshelf } from 'react-icons/gi';
 import CartWidget from '../CartWidget/CartWidget';
 import { getCategories } from '../../products';
 
-
 const NavBar = () => { 
 
     const [categories, setCategories] = useState([])

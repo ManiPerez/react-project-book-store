@@ -1,0 +1,31 @@
+.shopCompleted {  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+.shopCompleted__img {
+    display: flex;
+    justify-content: center;
+}
+
+.shopCompleted__img img{
+    width: 150px;
+}
+
+.shopCompleted__text {
+    text-align: center;
+    padding: 2rem;
+}
+
+.shopCompleted__text p {
+    font-size: 2rem;
+    color: var(--first-color-second);
+    font-weight: 400;
+    padding: 1rem;
+}
+
+.shopCompleted__icon {
+    font-size: 4rem;
+}

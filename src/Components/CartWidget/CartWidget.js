@@ -1,17 +1,27 @@
 import React, { useContext} from 'react';
+import { CartContext } from '../../Context/CartContext';
 import './styles.css';
 import { FaShoppingCart } from 'react-icons/fa';
-import { CartContext } from '../../Context/CartContext';
+import { MdRemoveShoppingCart } from 'react-icons/md';
 
 const CartWidget = () => {
 
-    const {totalCartCount} = useContext(CartContext);
+    const {cart, totalCartCount} = useContext(CartContext);
 
     return(
-        <button className="cartWidget">
-            <FaShoppingCart className="cartWidget__icon"/>
-            <span className="cartWidget__counter">{totalCartCount()}</span>
-        </button>
+        <>
+            {cart.length > 0 
+                ?
+                    <button className="cartWidget">
+                        <FaShoppingCart className="cartWidget__icon"/>
+                        <span className="cartWidget__counter">{totalCartCount()}</span>
+                    </button>
+                :
+                    <button className="cartWidget__empty">
+                        <MdRemoveShoppingCart className="cartWidget__empty-icon"/>
+                    </button>
+            }
+        </>
     );
 }
 
