@@ -3,7 +3,7 @@
     justify-content: center;
 }
 
-h2 {
+.payment h2 {
     font-size: 2.5rem;
     color: var(--first-color-second);
     font-weight: 400;
