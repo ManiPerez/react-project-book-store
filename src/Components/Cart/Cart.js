@@ -4,7 +4,7 @@ import { CartContext } from '../../Context/CartContext';
 import CartItem from './CartItem';
 import { Link } from 'react-router-dom';
 
-const CartView = () => {
+const Cart = () => {
 
   const {cart, totalPrice, totalCartCount, emptyCart} = useContext(CartContext)
 
@@ -58,4 +58,4 @@ const CartView = () => {
   )
 };
 
-export default CartView;
+export default Cart;
