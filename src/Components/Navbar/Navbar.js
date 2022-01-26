@@ -3,19 +3,22 @@ import { NavLink } from 'react-router-dom';
 import './styles.css';
 import { GiBookshelf } from 'react-icons/gi';
 import CartWidget from '../CartWidget/CartWidget';
-import { getCategories } from '../../products';
+import { db } from '../../Services/firebase';
+import { collection, getDocs } from 'firebase/firestore';
 
 const NavBar = () => { 
 
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
-
-      getCategories().then(categories => {
-
+      getDocs(collection(db, 'categories')).then((querySnapshop) => {
+        const categories = querySnapshop.docs.map(doc => {
+          return { id: doc.id, ...doc.data() }
+        })
         setCategories(categories)
-      })
-      
+      }).catch((error) => {
+        console.log('Error searching categories', error);
+      }) 
     },[])
 
     return (
@@ -27,9 +30,17 @@ const NavBar = () => {
           </NavLink>
         </div>
         <div className="navbar__categories">
-          {categories.map(cat => <NavLink to={`/category/${cat.categoryId}`} className='navbar__category' key={cat.categoryId} >{cat.description}</NavLink>)}
+          {categories.map(cat => 
+            <NavLink 
+              className='navbar__category' 
+              key={cat.id}
+              to={`/category/${cat.categoryId}`}
+              >
+                {cat.description}
+            </NavLink>)
+          }
         </div>
-        <NavLink to={'/cart'} className='navbar__category'><CartWidget /></NavLink>
+        <NavLink className='navbar__category' to={'/cart'}><CartWidget /></NavLink>
       </nav>
     )
 }
