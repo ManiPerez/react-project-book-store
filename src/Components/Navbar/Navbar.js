@@ -27,7 +27,7 @@ const NavBar = () => {
           </NavLink>
         </div>
         <div className="navbar__categories">
-          {categories.map(cat => <NavLink to={`/category/${cat.id}`} className='navbar__category' key={cat.id} >{cat.description}</NavLink>)}
+          {categories.map(cat => <NavLink to={`/category/${cat.categoryId}`} className='navbar__category' key={cat.categoryId} >{cat.description}</NavLink>)}
         </div>
         <NavLink to={'/cart'} className='navbar__category'><CartWidget /></NavLink>
       </nav>

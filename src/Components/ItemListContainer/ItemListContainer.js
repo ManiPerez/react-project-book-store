@@ -19,7 +19,7 @@ const ItemListContainer = () => {
             
             getDocs(collection(db, 'items')).then((querySnapshop) => {
                 const products = querySnapshop.docs.map(doc => {
-                    console.log(doc);
+                    
                     return {id: doc.id, ...doc.data()}
                 })
                 setProducts(products)
@@ -32,7 +32,7 @@ const ItemListContainer = () => {
             setLoading(true)
             getDocs(query(collection(db, 'items'), where('categoryId', '==', categoryId))).then((querySnapshop) => {
                 const products = querySnapshop.docs.map(doc => {
-                    console.log(doc);
+                    
                     return {id: doc.id, ...doc.data()}
                 })
                 setProducts(products)

@@ -322,15 +322,15 @@ const products = [
 ]
 
 const categories = [
-    {id: 'aventura', description: 'Aventura'}, 
-    {id: 'ciencia-ficcion', description: 'Ciencia Ficción'}, 
-    {id: 'disenio', description: "Diseño"},
-    {id: 'fantasia', description: 'Fantasía'}, 
-    {id: 'misterio', description: 'Misterio'}, 
-    {id: 'programacion', description: 'Programación'},
-    {id: 'romance', description: 'Romance'}, 
-    {id: 'sociologia', description: 'Sociología'},
-    {id: 'terror', description: 'Terror'}
+    {categoryId: 'aventura', description: 'Aventura'}, 
+    {categoryId: 'ciencia-ficcion', description: 'Ciencia Ficción'}, 
+    {categoryId: 'disenio', description: "Diseño"},
+    {categoryId: 'fantasia', description: 'Fantasía'}, 
+    {categoryId: 'misterio', description: 'Misterio'}, 
+    {categoryId: 'programacion', description: 'Programación'},
+    {categoryId: 'romance', description: 'Romance'}, 
+    {categoryId: 'sociologia', description: 'Sociología'},
+    {categoryId: 'terror', description: 'Terror'}
 ]
 
 export const getCategories = () => {    
