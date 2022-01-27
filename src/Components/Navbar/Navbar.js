@@ -11,14 +11,17 @@ const NavBar = () => {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
-      getDocs(collection(db, 'categories')).then((querySnapshop) => {
-        const categories = querySnapshop.docs.map(doc => {
-          return { id: doc.id, ...doc.data() }
-        })
-        setCategories(categories)
-      }).catch((error) => {
-        console.log('Error searching categories', error);
-      }) 
+      (async () => {
+        try {
+          const querySnapshop = await getDocs(collection(db, 'categories'))
+          const categories = querySnapshop.docs.map(doc => {
+            return {id: doc.id, ...doc.data()}
+          })
+          setCategories(categories)
+        } catch (error) {
+          console.log('Error searching categories', error);
+        }
+      })()
     },[])
 
     return (
